@@ -1,0 +1,84 @@
+/* app/assets/stylesheets/customers.scss */
+.customers-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .navigation-links {
+    margin-bottom: 20px;
+    
+    a {
+      display: inline-block;
+      margin-right: 15px;
+      padding: 8px 16px;
+      background-color: #4a7bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      
+      &:hover {
+        background-color: #3a5fd9;
+      }
+    }
+  }
+  
+  .customers-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .customer-card {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .customer-image {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    
+    img.customer-thumbnail {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  .customer-details {
+    flex: 1;
+    padding: 15px;
+  }
+  
+  .customer-name {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #2c3e50;
+  }
+  
+  .customer-contact {
+    margin-bottom: 10px;
+    
+    p {
+      margin: 5px 0;
+    }
+  }
+  
+  .customer-notes {
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    
+    p {
+      margin: 5px 0;
+      font-size: 0.9em;
+    }
+  }
