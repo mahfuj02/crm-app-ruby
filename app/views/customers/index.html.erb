@@ -1,2 +1,15 @@
-<h1>Customers#index</h1>
-<p>Find me in app/views/customers/index.html.erb</p>
+<!-- app/views/customers/index.html.erb -->
+<div class="customers-container">
+  <h1>All Customers</h1>
+  
+  <div class="navigation-links">
+    <%= link_to "View Alphabetized", customers_alphabetized_path %>
+    <%= link_to "View Missing Email", customers_missing_email_path %>
+  </div>
+  
+  <div class="customers-list">
+    <% @customers.each do |customer| %>
+      <%= render partial: 'customer', locals: { customer: customer } %>
+    <% end %>
+  </div>
+</div>
